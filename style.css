@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+html, body {
+    margin: 0;
+    background-color: #fafcf5;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}  
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fe5f55;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.navbutton {
+  float: left;
+}
+.navbutton a {
+  display: block;
+  color: #fafcf5;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbutton a:hover {
+  color: #171717;
+  background-color: #fafcf5;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fe5f55;
+  color: #fafcf5;
+  text-align: center;
+}
