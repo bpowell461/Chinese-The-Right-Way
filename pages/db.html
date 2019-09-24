@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
     <title>DB Prototype</title>
@@ -8,7 +7,7 @@
     <script type="text/javascript" src="../javascript/jquery-3.4.1.slim.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../DataTables/datatables.min.css"/>
     <script type="text/javascript" src="../DataTables/datatables.min.js"></script>
-    <link href="../css/db.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
     <script type="text/javascript"> 
         $(document).ready( function () {
@@ -17,18 +16,22 @@
     </script>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h1>HSK DB Prototype</h1>
-    </div>
+    <!-- Sticky Navbar -->
+    <ul class="navbar">
+        <li class="navbutton active"><a href="#" class="headerButton">Home</a></li>
+        <li class="navbutton"><a href="#" class="headerButton">Flashcards</a></li>
+        <li class="navbutton"><a href="#" class="headerButton">Hua Mulan</a></li>
+        <li class="navbutton"><a href="#" class="headerButton">Resources</a></li>
+        <li class="navbutton"><a href="../pages/db.html" class="headerButton">Database</a></li>
+        <li class="navbutton"><a href="#" class="headerButton">Account</a></li>
+    </ul>
+<div class="grid-container">
 
-    <div class="main">
-        
+    <div class="middle">
+
         <table id="chn">
             <thead>
-                
                 <tr><th></th><th>Pinyin</th><th>Definition</th><th>Radical</th><th>Stroke count</th><th>HSK level</th><th><span title="index number in the Table of General Standard Chinese Characters">General Standard#</th><th>Frequency rank</th></tr>
-                
             </thead>
             <tbody>
                 
@@ -234,12 +237,11 @@
         </table>
 
     </div>
-
-    <div class="footer">
-        <p>Chinese Hanzi Database Browser</p>
-        <p>By: Cody Lee, 2019 - Mercer University</p>
-        <p>jQuery and DataTables used for educational purposes</p>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">  
+        <p>Cody "Tarkus" Lee</p>
+        <p>©MIT License - 2019</p>
+    </footer>
 </div>
 </body>
 </html>
