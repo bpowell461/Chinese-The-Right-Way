@@ -64,23 +64,25 @@ html, body {
 .grid-container {
   display: grid;
   min-height: 100%;
+  width: 100%;
   grid-template-areas: 
     /*'header header header header header header' */
     'left middle middle middle middle right' 
     'footer footer footer footer footer footer';
+  grid-column-gap: 30px;
 } 
-.left,
-.middle,
-.right {
-  padding: 10px;
+.left, .right, .middle {
+  padding: 20px 0px 20px 0px;
 }
 .left {
+  padding-left: 30px;
   grid-area: left;
 }
 .middle {
   grid-area: middle;
 }
 .right {
+  padding-right: 30px;
   grid-area: right;
 }
 .footer {
