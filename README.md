@@ -6,11 +6,11 @@ program which aims to teach native English speakers who to read and write Mandar
 sotries, pictograms, interactive exercises, and database tools.
 
 ## Roadmap
-* [ ]   Site Skeleton
+* [X]   Site Skeleton
 * [ ]   Flashcards
 * [ ]   User Accounts
 * [ ]   Hua Mulan Text Reader
-* [ ]   Character Database
+* [X]   Character Database
 * [ ]   Fundamentals Exercises
 * [ ]   Pinyin Guide
 * [ ]   Forming Characters
