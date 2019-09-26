@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    background-color: #fafcf5;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+} 
+
+.header {
+  height: 500px;
+  width: 100%;
+  text-align: center;
+  line-height: 1rem;
+  padding: 150px 0px 100px 0px;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 100%), url("../assets/img/stockwriting.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header h1 {
+  font-size: 5em;
+  font-weight: 900;
+  color: #454545;
+}
+.header p {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #595959;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #fe5f55;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.navbutton {
+  float: left;
+  font-weight: bold;
+}
+.navbutton a {
+  display: block;
+  color: #fafcf5;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbutton a:hover {
+  color: #454545;
+  background-color: #fafcf5;
+}
+
+.grid-container {
+  display: grid;
+  min-height: 100%;
+  width: 100%;
+  grid-template-areas: 
+    /*'header header header header header header' */
+    'left middle middle middle middle right' 
+    'footer footer footer footer footer footer';
+  grid-column-gap: 30px;
+} 
+.left, .right, .middle {
+  padding: 20px 0px 20px 0px;
+}
+.left {
+  padding-left: 30px;
+  grid-area: left;
+}
+.middle {
+  grid-area: middle;
+}
+.right {
+  padding-right: 30px;
+  grid-area: right;
+}
+.footer {
+  grid-area: footer;
+  background-color: #fe5f55;
+  color: #fafcf5;
+  text-align: center;
+  padding: 2rem;
+  line-height: 0.5rem;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+.grid-container img {
+  border-radius: 8px;
+  height: 300px;
+  width: 400px;
+  float: left;
+  padding: 1.2rem 1rem 1rem 0rem;
+}
+.grid-container h1 {
+  color: #454545;
+}
+.grid-container h3 {
+  color: #454545;
+}
+.grid-container p {
+  color: #454545;
+}
+.footer p {
+    color: #fafcf5;
+    font-size: 1rem;
+}
+.footer a {
+  text-decoration: underline;
+  color: #fafcf5;
+}
