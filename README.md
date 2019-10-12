@@ -19,3 +19,6 @@ sotries, pictograms, interactive exercises, and database tools.
 ## Development Team
 *   Project Leader: [Cody "Tarkus" Lee](blacktarkus.github.io)
 *   Faculty Advisor: Dr. Qiang M. Zhao
+
+### Development Tracker [Trello]
+https://trello.com/b/ZdsxZma3/csc480-chinese-project
