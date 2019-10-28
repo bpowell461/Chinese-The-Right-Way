@@ -10,8 +10,12 @@
     <script type="text/javascript" src="../javascript/dbcontents.js"></script>
     <script type="text/javascript">
     var i;
+    function shuffle(dataSet) {
+ 		dataSet.sort(() => Math.random() - 0.5);
+	}
     $(document).ready(function () { // default to first entry in array
         i = 0;
+        shuffle(dataSet);
         document.getElementById("character").innerHTML = dataSet[i][0];
         document.getElementById("translation").innerHTML = dataSet[i][2];
     });
@@ -54,7 +58,7 @@
     <footer class="footer">
         <p>Cody "Tarkus" Lee</p>
         <p>©MIT License - 2019</p>
-        <p>Stock Photos from <a href="https://www.pexels.com/" target="_blank">pexels.com</a></p>
+        <p>character database contents provided by Unihan</p>
     </footer>
 </div>
 
