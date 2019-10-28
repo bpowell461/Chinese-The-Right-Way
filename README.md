@@ -7,7 +7,7 @@ sotries, pictograms, interactive exercises, and database tools.
 
 ## Roadmap
 * [X]   Site Skeleton
-* [ ]   Flashcards
+* [X]   Flashcards
 * [ ]   User Accounts
 * [ ]   Hua Mulan Text Reader
 * [X]   Character Database
@@ -22,3 +22,7 @@ sotries, pictograms, interactive exercises, and database tools.
 
 ### Development Tracker [Trello]
 https://trello.com/b/ZdsxZma3/csc480-chinese-project
+
+###
+character database souce [Hanzidb]
+http://hanzidb.org
