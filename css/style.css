@@ -1,6 +1,4 @@
-* {
-	box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 html, body {
 	margin: 0;
 	background-color: #fafcf5;
@@ -80,9 +78,7 @@ html, body {
 	padding-left: 30px;
 	grid-area: left;
 }
-.middle {
-	grid-area: middle;
-}
+.middle { grid-area: middle; }
 .right {
 	padding-right: 30px;
 	grid-area: right;
@@ -112,15 +108,9 @@ html, body {
 	float: left;
 	padding: 1.2rem 1rem 1rem 0rem;
 }
-.grid-container h1 {
-	color: #454545;
-}
-.grid-container h3 {
-	color: #454545;
-}
-.grid-container p {
-	color: #454545;
-}
+.grid-container h1 { color: #454545; }
+.grid-container h3 { color: #454545; }
+.grid-container p  { color: #454545; }
 .footer p {
 	color: #fafcf5;
 	font-size: 1rem;
@@ -155,9 +145,7 @@ html, body {
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-	visibility: visible;
-}
+.tooltip:hover .tooltiptext { visibility: visible; }
 
 
 .flip3D { 
@@ -191,6 +179,12 @@ html, body {
 	text-align: center;
 	vertical-align: middle;
 }
+.flip3D > .back p {
+	line-height: 1.5;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
 .flip3D > .back {
 	padding: 0;
 	position:absolute;
@@ -207,18 +201,8 @@ html, body {
 	font-size: 2rem;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-.flip3D > .back p {
-	line-height: 1.5;
-	display: inline-block;
-	text-align: center;
-	vertical-align: middle;
-}
-.flip3D:hover > .front {
-	transform: perspective( 600px ) rotateY( -180deg );
-}
-.flip3D:hover > .back {
-	transform: perspective( 600px ) rotateY( 0deg );
-}
+.flip3D:hover > .front { transform: perspective( 600px ) rotateY( -180deg ); }
+.flip3D:hover > .back  { transform: perspective( 600px ) rotateY( 0deg ); }
 .flashnav {
 	margin: auto;
 	text-align: center;
@@ -238,4 +222,4 @@ html, body {
 	padding: 15px 15px;
 	border: none;
 }
-.flashnav > .fbutton:hover   { color: #454545; background-color: #fafcf5; }
+.flashnav > .fbutton:hover { color: #454545; background-color: #fafcf5; }
