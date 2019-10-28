@@ -1,128 +1,225 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 html, body {
-    margin: 0;
-    background-color: #fafcf5;
-    width: 100%;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+	margin: 0;
+	background-color: #fafcf5;
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', "微软雅黑", STXihei, "华文细黑", sans-serif;;
+	font-size: 16px;
+	z-index: 1000;
 } 
 
 .header {
-  height: 500px;
-  width: 100%;
-  text-align: center;
-  line-height: 1rem;
-  padding: 150px 0px 100px 0px;
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 100%), url("../assets/img/stockwriting.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	height: 500px;
+	width: 100%;
+	text-align: center;
+	line-height: 1rem;
+	padding: 150px 0px 100px 0px;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 100%), url("../assets/img/stockwriting.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .header h1 {
-  font-size: 5em;
-  font-weight: 900;
-  color: #454545;
+	font-size: 5rem;
+	font-weight: 900;
+	color: #454545;
 }
 .header p {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #595959;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #595959;
 }
 
 .navbar {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-  background-color: #fe5f55;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background-color: #fe5f55;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	z-index: 1001;
 }
 .navbutton {
-  float: left;
-  font-weight: bold;
+	float: left;
+	font-weight: bold;
 }
 .navbutton a {
-  display: block;
-  color: #fafcf5;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+	display: block;
+	color: #fafcf5;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
 }
 .navbutton a:hover {
-  color: #454545;
-  background-color: #fafcf5;
+	color: #454545;
+	background-color: #fafcf5;
 }
 
 .grid-container {
-  display: grid;
-  min-height: 100%;
-  width: 100%;
-  grid-template-areas: 
-    /*'header header header header header header' */
-    'left middle middle middle middle right' 
-    'footer footer footer footer footer footer';
-  grid-column-gap: 30px;
+	display: grid;
+	min-height: 100%;
+	width: 100%;
+	grid-template-areas: 
+	/*'header header header header header header' */
+	'left middle middle middle middle right' 
+	'footer footer footer footer footer footer';
+	grid-column-gap: 30px;
 } 
 .left, .right, .middle {
-  padding: 20px 0px 20px 0px;
+	padding: 20px 0px 20px 0px;
+	font-size: 18px;
 }
 .left {
-  padding-left: 30px;
-  grid-area: left;
+	padding-left: 30px;
+	grid-area: left;
 }
-.middle {
-  grid-area: middle;
-}
+.middle { grid-area: middle; }
 .right {
-  padding-right: 30px;
-  grid-area: right;
+	padding-right: 30px;
+	grid-area: right;
 }
 .footer {
-  grid-area: footer;
-  background-color: #fe5f55;
-  color: #fafcf5;
-  text-align: center;
-  padding: 2rem;
-  line-height: 0.5rem;
+	grid-area: footer;
+	background-color: #fe5f55;
+	color: #fafcf5;
+	text-align: center;
+	padding: 2rem;
+	line-height: 0.5rem;
 }
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  .grid-container  {
-    grid-template-areas: 
-      'left left left left left left' 
-      'middle middle middle middle middle middle' 
-      'right right right right right right' 
-      'footer footer footer footer footer footer';
-  }
+	.grid-container  {
+		grid-template-areas: 
+		'left left left left left left' 
+		'middle middle middle middle middle middle' 
+		'right right right right right right' 
+		'footer footer footer footer footer footer';
+	}
 }
 .grid-container img {
-  border-radius: 8px;
-  height: 300px;
-  width: 400px;
-  float: left;
-  padding: 1.2rem 1rem 1rem 0rem;
+	border-radius: 8px;
+	height: 300px;
+	width: 400px;
+	float: left;
+	padding: 1.2rem 1rem 1rem 0rem;
 }
-.grid-container h1 {
-  color: #454545;
-}
-.grid-container h3 {
-  color: #454545;
-}
-.grid-container p {
-  color: #454545;
-}
+.grid-container h1 { color: #454545; }
+.grid-container h3 { color: #454545; }
+.grid-container p  { color: #454545; }
 .footer p {
-    color: #fafcf5;
-    font-size: 1rem;
+	color: #fafcf5;
+	font-size: 1rem;
 }
 .footer a {
-  text-decoration: underline;
-  color: #fafcf5;
+	text-decoration: underline;
+	color: #fafcf5;
 }
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+	font-size: 16px;
+	visibility: hidden;
+	width: 250px;
+	background-color: #ffffcc;
+	color: #454545;
+	text-align: left;
+	padding: 10px 20px 10px 20px;
+	border-radius: 6px;
+	line-height: 2rem;
+	
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
+	top: -75%;
+	left: 125%; 
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext { visibility: visible; }
+
+
+.flip3D { 
+	width:500px; 
+	height:300px; 
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	padding: 0;
+}
+.flip3D > .front {
+	padding: 0;
+	position:absolute;
+	transform: perspective( 600px ) rotateY( 0deg );
+	background:#f8f8ff;
+	width:500px;
+	height:300px;
+	border-radius: 16px;
+	backface-visibility: hidden;
+	transition: transform .25s linear 0s;
+	text-align: center;
+	line-height: 300px;
+	font-weight: bold;
+	font-size: 2rem;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.flip3D > .front p {
+	line-height: 1.5;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+.flip3D > .back p {
+	line-height: 1.5;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+.flip3D > .back {
+	padding: 0;
+	position:absolute;
+	transform: perspective( 600px ) rotateY( 180deg );
+	background: #f8f8ff;
+	width:500px;
+	height:300px;
+	border-radius: 16px;
+	backface-visibility: hidden;
+	transition: transform .25s linear 0s;
+	text-align: center;
+	line-height: 300px;
+	font-weight: bold;
+	font-size: 2rem;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.flip3D:hover > .front { transform: perspective( 600px ) rotateY( -180deg ); }
+.flip3D:hover > .back  { transform: perspective( 600px ) rotateY( 0deg ); }
+.flashnav {
+	margin: auto;
+	text-align: center;
+	align-items: center;
+}
+.flashnav > .fbutton {
+	margin-left: 100px;
+	margin-right: 100px;
+	font-size: 1.18rem;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	background-color: #fe5f55;
+	font-weight: bold;
+	color: #fafcf5;
+	text-align: center;
+	text-decoration: none;
+	width: 10%;
+	padding: 15px 15px;
+	border: none;
+}
+.flashnav > .fbutton:hover { color: #454545; background-color: #fafcf5; }
