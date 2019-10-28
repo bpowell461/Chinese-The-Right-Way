@@ -4,114 +4,13 @@
     <title>DB Prototype</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="../javascript/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../DataTables/datatables.min.css"/>
-    <script type="text/javascript" src="../DataTables/datatables.min.js"></script>
     <link href="../css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
-    <script type="text/javascript"> 
-var dataSet = [
-    ["的","de","possessive, adjectival suffix","白","8","1","1155","1" ],
-    ["一","yī","one; a, an; alone ","一","1","1","0001","2" ],
-    ["是","shì","indeed, yes, right; to be; demonstrative pronoun, this, that","日","9","1","1479","3" ],
-    ["不","bù","no, not; un-; negative prefix","一","4","1","0091","4" ],
-    ["了","le","to finish; particle of completed action","亅","2","1","0017","5" ],
-    ["在","zài","be at, in, on; consist in, rest","土","6","1","0388","6" ],
-    ["人","rén","man; people; mankind; someone else","人","2","1","0010","7" ],
-    ["有","yǒu","have, own, possess; exist","月","6","1","0390","8" ],
-    ["我","wǒ","our, us, i, me, my, we","戈","7","1","0761","9" ],
-    ["他","tā","other, another; he, she, it","人","5","1","0277","10" ],
-    ["这","zhè","this, the, here","辵","7","1","0837","11" ],
-    ["个","gè","numerary adjunct, piece; single","丨","3","1","0045","12" ],
-    ["们","men","adjunct pronoun indicate plural","人","5","1","0273","13" ],
-    ["中","zhōng","central; center, middle; in the midst of; hit (target); attain","丨","4","1","0113","14" ],
-    ["来","lái","come, coming; return, returning","木","7","1","0707","15" ],
-    ["上","shàng","top; superior, highest; go up, send up","一","3","1","0036","16" ],
-    ["大","dà","big, great, vast, large, high","大","3","1","0032","17" ],
-    ["和","hé","harmony, peace; peaceful, calm","口","8","1","1131","19" ],
-    ["国","guó","nation, country, nation-state","囗","8","1","1081","20" ],
-    ["说","shuō","speak, say, talk; scold, upbraid","言","9","1","1717","24" ],
-    ["时","shí","time, season; era, age, period","日","7","1","0717","25" ],
-    ["出","chū","go out, send out; stand; produce","凵","5","1","0330","28" ],
-    ["会","huì","assemble, meet together; meeting","人","6","1","0486","29" ],
-    ["你","nǐ","you, second person pronoun","人","7","1","0782","32" ],
-    ["对","duì","correct, right; facing, opposed","寸","5","1","0341","33" ],
-    ["生","shēng","life, living, lifetime; birth","生","5","1","0263","34" ],
-    ["能","néng","to be able; can, permitted to; ability","肉","10","1","2146","35" ],
-    ["子","zi","offspring, child; fruit, seed of; 1st terrestrial branch","子","3","1","0064","37" ],
-    ["那","nà","that, that one, those","邑","6","1","0564","38" ],
-    ["下","xià","under, underneath, below; down; inferior; bring down","一","3","1","0030","42" ],
-    ["年","nián"," ","干","6","1","0444","45" ],
-    ["后","hòu","queen, empress, sovereign; behind, rear, after","口","6","1","0482","48" ],
-    ["作","zuò","make; work; compose, write; act, perform","人","7","1","0777","49" ],
-    ["里","lǐ","unit of distance; village; lane","里","7","1","0721","50" ],
-    ["家","jiā","house, home, residence; family","宀","10","1","2099","56" ],
-    ["多","duō","much, many; more than, over","夕","6","1","0507","61" ],
-    ["么","me","interrogative particle; repetition of a tune small; tender","丿","3","1","0048","63" ],
-    ["去","qù","go away, leave, depart","厶","5","1","0204","64" ],
-    ["学","xué","learning, knowledge; school","子","8","1","1273","66" ],
-    ["都","dōu","metropolis, capital; all, the whole; elegant, refined","邑","10","1","1801","68" ],
-    ["同","tóng","same, similar; together with","口","6","1","0427","69" ],
-    ["现","xiàn","appear, manifest, become visible","玉","8","1","0949","70" ],
-    ["没","méi","not, have not, none; drown, sink","水","7","1","0867","72" ],
-    ["面","miàn","face; surface; plane; side, dimension","面","9","1","1455","74" ],
-    ["起","qǐ","rise, stand up; go up; begin","走","10","1","1789","75" ],
-    ["看","kàn","look, see; examine, scrutinize","目","9","1","1539","76" ],
-    ["天","tiān","sky, heaven; god, celestial","大","4","1","0078","78" ],
-    ["分","fēn","divide; small unit of time etc.","刀","4","1","0146","79" ],
-    ["好","hǎo","good, excellent, fine; well","女","6","1","0581","82" ],
-    ["小","xiǎo","small, tiny, insignificant","小","3","1","0037","83" ],
-    ["些","xiē","little, few; rather, somewhat","二","8","1","1069","86" ],
-    ["样","yàng","shape, form, pattern, style","木","10","1","1849","88" ],
-    ["她","tā","she, her","女","6","1","0582","91" ],
-    ["本","běn","root, origin, source; basis","木","5","1","0210","92" ],
-    ["前","qián","in front, forward; preceding","刀","9","1","1650","93" ],
-    ["开","kāi","open; initiate, begin, start","廾","4","1","0076","94" ],
-    ["想","xiǎng","think, speculate, plan, consider","心","13","1","2867","99" ],
-    ["机","jī","desk; machine; moment","木","6","1","0377","111" ],
-    ["十","shí","ten, tenth; complete; perfect","十","2","1","0004","112" ],
-    ["工","gōng","labor, work; worker, laborer","工","3","1","0026","118" ],
-    ["明","míng","bright, light, brilliant; clear","日","8","1","1087","121" ],
-    ["三","sān","three","一","3","1","0022","125" ],
-    ["关","guān","frontier pass; close; relation","八","6","1","0532","127" ],
-    ["点","diǎn","dot, speck, spot; point, degree","火","9","1","1469","128" ],
-    ["高","gāo","high, tall; lofty, elevated","高","10","1","2021","134" ],
-    ["很","hěn","very, quite, much","彳","9","1","1584","138" ],
-    ["见","jiàn","see, observe, behold; perceive","見","4","1","0118","153" ],
-    ["什","shén","file of ten soldiers; mixed, miscellaneous","人","4","1","0129","156" ],
-    ["二","èr","two; twice","二","2","1","0003","157" ],
-    ["果","guǒ","fruit; result","木","8","1","1079","165" ],
-    ["西","xī","west(ern); westward, occident","襾","6","1","0384","167" ],
-    ["月","yuè","moon; month; KangX4","月","4","1","0150","169" ],
-    ["话","huà","speech, talk, language; dialect","言","8","1","1296","170" ],
-    ["回","huí","return, turn around; a time","囗","6","1","0438","172" ],
-    ["老","lǎo","old, aged; experienced","老","6","1","0360","179" ],
-    ["先","xiān","first, former, previous","儿","6","1","0446","188" ],
-    ["儿","ér","son, child; KangX0","儿","2","1","0012","192" ],
-    ["东","dōng","east, eastern, eastward","一","5","1","0225","194" ],
-    ["水","shuǐ","water, liquid, lotion, juice","水","4","1","0117","202" ],
-    ["名","míng","name, rank, title, position","口","6","1","0505","203" ],
-    ["几","jǐ","small table","几","2","1","0014","211" ],
-    ["认","rèn","recognize, know, understand","言","4","1","0171","213" ],
-    ["系","xì","system; line, link, connection","糸","7","1","0825","216" ],
-    ["气","qì","steam, vapor; KangX4","气","4","1","0122","217" ],
-    ["打","dǎ","strike, hit, beat; fight; attack","手","5","1","0196","223" ],
-    ["女","nǚ","woman, girl; feminine; rad. 38","女","3","1","0067","224" ],
-    ["四","sì","four","囗","5","1","0262","226" ],
-    ["电","diàn","electricity; electric; lightning","曰","5","1","0242","230" ],
-    ["少","shǎo","few, less, inadequate","小","4","1","0110","233" ],
-    ["太","tài","very, too, much; big; extreme","大","4","1","0093","240" ],
-    ["再","zài","again, twice, re-","冂","6","1","0382","242" ],
-    ["做","zuò","work, make; act","人","11","1","2324","246" ],
-    ["期","qī","period of time; date; time limit","月","12","1","2542","253" ],
-    ["五","wǔ","five; surname","二","4","1","0088","279" ],
-    ["书","shū","book, letter, document; writings","丨","4","1","0188","282" ],
-    ["听","tīng","hear; understand; obey, comply","口","7","1","0739","285" ],
-    ["住","zhù","reside, live at, dwell, lodge; stop","人","7","1","0783","309" ],
-    ["北","běi","north; northern; northward","匕","5","1","0227","315" ],
-    ["觉","jué","to wake up from sleep; conscious","見","9","1","1694","327" ]
-];
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../javascript/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="../javascript/dbcontents.js"></script>
+    <script type="text/javascript">
         $(document).ready(function() {
             $('#chn').DataTable( {
                 data: dataSet,
@@ -140,14 +39,11 @@ var dataSet = [
         <li class="navbutton"><a href="#" class="headerButton">Account</a></li>
     </ul>
 <div class="grid-container">
-
     <div class="middle">
-
-        <table id="chn" class="display"></table>
+        <table id="chn" class="display"></table> <!--data pulled from .js file -->
     </div>
-    
     <!-- Footer -->
-    <footer class="footer">  
+    <footer class="footer">
         <p>Cody "Tarkus" Lee</p>
         <p>©MIT License - 2019</p>
     </footer>

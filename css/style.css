@@ -166,7 +166,7 @@ html, body {
 	height:300px;
 	border-radius: 16px;
 	backface-visibility: hidden;
-	transition: transform .5s linear 0s;
+	transition: transform .25s linear 0s;
 	text-align: center;
 	line-height: 300px;
 	font-weight: bold;
@@ -194,7 +194,7 @@ html, body {
 	height:300px;
 	border-radius: 16px;
 	backface-visibility: hidden;
-	transition: transform .5s linear 0s;
+	transition: transform .25s linear 0s;
 	text-align: center;
 	line-height: 300px;
 	font-weight: bold;
