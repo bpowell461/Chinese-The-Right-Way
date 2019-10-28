@@ -7,18 +7,31 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="../javascript/jquery-3.4.1.min.js"></script>
-    <script>
-     $(document).ready(function () {
+    <script type="text/javascript">
+    var i = 0;
+    $(document).ready(function () {
         fetch("./db.json")
             .then(function(resp) {
                 return resp.json;
             })
             .then(function(data) {
                 console.log(data);
-                document.getElementById("character").innerHTML = data[1].CHAR;
-                document.getElementById("translation").innerHTML = data[1].ENG;
+                document.getElementById("character").innerHTML = data[i].CHAR;
+                document.getElementById("translation").innerHTML = data[i].ENG;
             });
     });
+    function deci() {
+        i--;
+        console.log(i);
+        document.getElementById("character").innerHTML = data[i].CHAR;
+        document.getElementById("translation").innerHTML = data[i].ENG;
+    };
+    function inci() {
+        i++;
+        console.log(i);
+        document.getElementById("character").innerHTML = data[i].CHAR;
+        document.getElementById("translation").innerHTML = data[i].ENG;
+    };
     </script>
 </head>
 <body>
@@ -40,8 +53,8 @@
           <div class="back"><p id="translation"></p></div>
         </div>
         <div class="flashnav">
-            <button class="fbutton">Previous</button>
-            <button class="fbutton">Next</button>
+            <button onclick="deci();" class="fbutton">Previous</button>
+            <button onclick="inci();" class="fbutton">Next</button>
         </div>
     </div>
     <!-- Footer -->
