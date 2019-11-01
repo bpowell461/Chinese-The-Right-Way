@@ -5,31 +5,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/flash.css" rel="stylesheet">
+    <link href="../css/cube.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script type="text/javascript" src="../javascript/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../javascript/dbcontents.js"></script>
+     <script type="text/javascript" src="../javascript/cube.js"></script>
     <script type="text/javascript">
-    var i;
-    function shuffle(dataSet) {
- 		dataSet.sort(() => Math.random() - 0.5);
-	}
-    $(document).ready(function () { // default to first entry in array
-        i = 0;
-        shuffle(dataSet);
-        document.getElementById("character").innerHTML = dataSet[i][0];
-        document.getElementById("translation").innerHTML = dataSet[i][2];
-    });
-    function deci() { // next flashcard in array
-        i--;
-        document.getElementById("character").innerHTML = dataSet[i][0];
-        document.getElementById("translation").innerHTML = dataSet[i][2];
-    };
-    function inci() { // previous flashcard in array
-        i++;
-        document.getElementById("character").innerHTML = dataSet[i][0];
-        document.getElementById("translation").innerHTML = dataSet[i][2];
-    };
+        function deci() { // next flashcard in array
+            i--;
+            document.getElementById("character").innerHTML = dataSet[i][0];
+            document.getElementById("translation").innerHTML = dataSet[i][2];
+        };
+        function inci() { // previous flashcard in array
+            i++;
+            document.getElementById("character").innerHTML = dataSet[i][0];
+            document.getElementById("translation").innerHTML = dataSet[i][2];
+        };
     </script>
 </head>
 <body>
@@ -46,13 +37,29 @@
 
 <div class="grid-container">
     <div class="middle">
-        <div class="flip3D">
-          <div class="front"><p id="character"></p></div>
-          <div class="back"><p id="translation"></p></div>
+        <div class = "wrapper">
+        <div class="viewport">
+          <div class="cube">
+            <div class="side">
+              <div class="cube-image">1</div>
+            </div>
+            <div class="side">
+              <div class="cube-image">2</div>
+            </div>
+            <div class="side">
+              <div class="cube-image">3</div>
+            </div>
+            <div class="side">
+              <div class="cube-image">4</div>
+            </div>
+            <div class="side">
+              <div class="cube-image">5</div>
+            </div>
+            <div class="side">
+              <div class="cube-image active">6</div>
+            </div>
+          </div>
         </div>
-        <div class="flashnav">
-            <button onclick="deci();" class="fbutton">Previous</button>
-            <button onclick="inci();" class="fbutton">Next</button>
         </div>
     </div>
     <!-- Footer -->
