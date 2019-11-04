@@ -19,7 +19,7 @@
   -ms-transform: scale(0.8, 0.8);
   -o-transform: scale(0.8, 0.8);
   transform: scale(0.8, 0.8);
-  -webkit-box-reflect: below 170px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(250, 250, 250, 0.1))); }
+}
 
 .cube {
   position: relative;
@@ -40,10 +40,10 @@
 .cube > div {
   overflow: hidden;
   position: absolute;
-  opacity: 0.9;
+  opacity: 1.0;
   height: 200px;
   width: 200px;
-  background-image: url("http://jordizle.com/static/img/blank.png");
+  
   -webkit-touch-callout: none;
   -moz-touch-callout: none;
   -ms-touch-callout: none;
@@ -56,15 +56,16 @@
   user-select: none; }
 
 .cube > div > div.cube-image {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
   line-height: 200px;
-  font-size: 80px;
+  font-size: 62px;
+  word-wrap: break-word;
   text-align: center;
   color: #1b9bd8;
   -webkit-transition: color 600ms;
@@ -72,7 +73,19 @@
   -ms-transition: color 600ms;
   -o-transition: color 600ms;
   transition: color 600ms; }
+  
   .cube > div > div.cube-image.active {
+    color: red; }
+
+    .cube > div > div.cube-image > p {
+  color: #1b9bd8;
+  -webkit-transition: color 600ms;
+  -moz-transition: color 600ms;
+  -ms-transition: color 600ms;
+  -o-transition: color 600ms;
+  transition: color 600ms; }
+  
+  .cube > div > div.cube-image.active > p{
     color: red; }
 
 .cube > div:hover {
@@ -87,6 +100,8 @@
   -ms-transform: rotateX(90deg) translateZ(100px);
   -o-transform: rotateX(90deg) translateZ(100px);
   transform: rotateX(90deg) translateZ(100px);
+  word-wrap: break-word;
+    opacity: 1.0;
   outline: 1px solid transparent; }
 
 .cube > div:nth-child(2) {
@@ -95,6 +110,8 @@
   -ms-transform: translateZ(100px);
   -o-transform: translateZ(100px);
   transform: translateZ(100px);
+  word-wrap: break-word;
+    opacity: 1.0;
   outline: 1px solid transparent; }
 
 .cube > div:nth-child(3) {
@@ -103,6 +120,8 @@
   -ms-transform: rotateY(90deg) translateZ(100px);
   -o-transform: rotateY(90deg) translateZ(100px);
   transform: rotateY(90deg) translateZ(100px);
+  word-wrap: break-word;
+    opacity: 1.0;
   outline: 1px solid transparent; }
 
 .cube > div:nth-child(4) {
@@ -111,6 +130,8 @@
   -ms-transform: rotateY(180deg) translateZ(100px);
   -o-transform: rotateY(180deg) translateZ(100px);
   transform: rotateY(180deg) translateZ(100px);
+  word-wrap: break-word;
+    opacity: 1.0;
   outline: 1px solid transparent; }
 
 .cube > div:nth-child(5) {
@@ -119,6 +140,8 @@
   -ms-transform: rotateY(-90deg) translateZ(100px);
   -o-transform: rotateY(-90deg) translateZ(100px);
   transform: rotateY(-90deg) translateZ(100px);
+  word-wrap: break-word;
+    opacity: 1.0;
   outline: 1px solid transparent; }
 
 .cube > div:nth-child(6) {
@@ -127,13 +150,13 @@
   -ms-transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
   -o-transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
   transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
+  word-wrap: break-word;
+    opacity: 1.0;
   outline: 1px solid transparent; }
 
-object {
-  opacity: 0.5; }
+object { opacity: 1.0; }
 
-object:hover {
-  opacity: 1; }
+object:hover { opacity: 1.0; }
 
 @media (max-width: 640px) {
   .viewport {
@@ -142,6 +165,11 @@ object:hover {
     -ms-transform: scale(0.6, 0.6);
     -o-transform: scale(0.6, 0.6);
     transform: scale(0.6, 0.6); } }
+
+.flashnav {
+  margin-left: 19%;
+  align-self: center;
+}
 
 .flashnav > .fbutton {
     margin-left: 100px;
@@ -153,7 +181,7 @@ object:hover {
     color: #fafcf5;
     text-align: center;
     text-decoration: none;
-    width: 10%;
+    width: 16%;
     padding: 15px 15px;
     border: none;
 }
