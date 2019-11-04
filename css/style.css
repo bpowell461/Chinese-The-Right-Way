@@ -10,7 +10,7 @@ html, body {
 } 
 
 .header {
-	height: 500px;
+	height: 400px;
 	width: 100%;
 	text-align: center;
 	line-height: 1rem;
@@ -40,9 +40,10 @@ html, body {
 	background-color: #fe5f55;
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
-	top: 0;
+	top: 0px;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	z-index: 1001;
+	line-height: 1.5rem;
 }
 .navbutton {
 	float: left;
@@ -101,6 +102,13 @@ html, body {
 		'footer footer footer footer footer footer';
 	}
 }
+.grid-container a {
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+}
+.grid-container a:visited { color: #454545; }
+.grid-container a:hover { color: #fe5f55; }
 .grid-container img {
 	border-radius: 8px;
 	height: 300px;
@@ -118,6 +126,14 @@ html, body {
 .footer a {
 	text-decoration: underline;
 	color: #fafcf5;
+}
+.footer a:visited {
+	text-decoration: underline;
+	color: #fafcf5;
+}
+.footer a:hover {
+	text-decoration: underline;
+	color: #454545;
 }
 
 .tooltip {
@@ -146,3 +162,11 @@ html, body {
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext { visibility: visible; }
+
+ul {
+  border-left: 5px solid #fe5f55;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 10px 20px;
+  line-height: 2.2rem;
+}
