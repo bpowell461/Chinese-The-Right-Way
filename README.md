@@ -23,6 +23,8 @@ sotries, pictograms, interactive exercises, and database tools.
 ### Development Tracker [Trello]
 https://trello.com/b/ZdsxZma3/csc480-chinese-project
 
-###
-character database souce [Hanzidb]
+## Use Cases
+https://merceru.instructure.com/courses/37319/files/folder/Team%20Assignments/Sample%20Docs/Chinese%20Website%20-%20Concepts?preview=1525347
+
+### Character database souce [Hanzidb]
 http://hanzidb.org
