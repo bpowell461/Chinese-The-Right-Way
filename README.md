@@ -8,7 +8,7 @@ sotries, pictograms, interactive exercises, and database tools.
 ## Roadmap
 * [X]   Site Skeleton
 * [X]   Flashcards
-* [ ]   User Accounts
+* [X]   User Accounts
 * [ ]   Hua Mulan Text Reader
 * [X]   Character Database
 * [ ]   Fundamentals Exercises
@@ -18,6 +18,7 @@ sotries, pictograms, interactive exercises, and database tools.
 
 ## Development Team
 *   Project Leader: [Cody "Tarkus" Lee](blacktarkus.github.io)
+*   Developer: Brad Powell
 *   Faculty Advisor: Dr. Qiang M. Zhao
 
 ### Development Tracker [Trello]
