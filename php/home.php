@@ -1,10 +1,10 @@
 <?php
 session_start();
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: ../login.html');
+	header('Location: ../pages/login.php');
 	exit();
 } else {
-	header('Location:../index.html');
+	header('Location:../index.php');
 	exit();
 }
 	
