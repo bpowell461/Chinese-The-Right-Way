@@ -24,7 +24,7 @@ $stmt->bind_result($Progress);
 $stmt->fetch();
 $stmt->close();
 }
-//query database to find all cards with a level 1
+//query database to find all cards with a level defined
 $user_check_query = mysqli_query($con, "SELECT symbol, definition FROM flashcards WHERE level='$Progress'");
 //ChromePhp::log($user_check_query);
 $array = array();
@@ -48,7 +48,8 @@ $json_array = json_encode($array);
     <script type="text/javascript" src="../javascript/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../javascript/dbcontents.js"></script>
     <script type="text/javascript">
-	
+	<!-- This should be a 2D array with 'symbol' and 'definition' as the only two contents of the array
+	this should allow us to dynamically generate flashcards based on a user's level.-->
 	console.log(<?php echo $json_array; ?>);
 	testArray =(<?php echo $json_array; ?>);
 	
