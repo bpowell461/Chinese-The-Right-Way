@@ -1,4 +1,7 @@
 <?php
+include '../php/chromelogger.php';
+error_reporting(-1);
+ini_set('display_errors', 'true');
 
 session_start();
 $DATABASE_HOST = 'localhost';
@@ -22,10 +25,14 @@ $stmt->fetch();
 $stmt->close();
 }
 //query database to find all cards with a level 1
-$user_check_query = mysqli_query($con, "SELECT * FROM `flashcards` WHERE `level` = '$Progress'");
-while($array = mysqli_fetch_assoc($user_check_query));
+$user_check_query = mysqli_query($con, "SELECT symbol, definition FROM flashcards WHERE level='$Progress'");
+//ChromePhp::log($user_check_query);
+$array = array();
+while($row = mysqli_fetch_assoc($user_check_query))
+{
+	$array[] = $row;
+}
 $json_array = json_encode($array);
-
 //insert into an array of cards
 
 ?>
@@ -43,6 +50,9 @@ $json_array = json_encode($array);
     <script type="text/javascript">
 	
 	console.log(<?php echo $json_array; ?>);
+	testArray =(<?php echo $json_array; ?>);
+	
+	
     var i;
     function shuffle(dataSet) {
  		dataSet.sort(() => Math.random() - 0.5);
@@ -51,17 +61,17 @@ $json_array = json_encode($array);
         i = 0;
         shuffle(dataSet);
         document.getElementById("character").innerHTML = dataSet[i][0];
-        document.getElementById("translation").innerHTML = dataSet[i][2];
+        document.getElementById("translation").innerHTML = dataSet[i][1];
     });
     function deci() { // next flashcard in array
         i--;
         document.getElementById("character").innerHTML = dataSet[i][0];
-        document.getElementById("translation").innerHTML = dataSet[i][2];
+        document.getElementById("translation").innerHTML = dataSet[i][1];
     };
     function inci() { // previous flashcard in array
         i++;
         document.getElementById("character").innerHTML = dataSet[i][0];
-        document.getElementById("translation").innerHTML = dataSet[i][2];
+        document.getElementById("translation").innerHTML = dataSet[i][1];
     };
     </script>
 </head>
@@ -75,8 +85,8 @@ $json_array = json_encode($array);
     <li class="navbutton"><a href="resources.php" class="headerButton">Resources</a></li>
     <li class="navbutton"><a href="db.php" class="headerButton">Database</a></li>
     <li class="navbutton"><a href="../php/login.php" class="headerButton">Account</a></li>
+	<p> You are viewing level <?php echo $Progress; ?> flashcards! </p>
 </ul>
-
 <div class="grid-container">
     <div class="middle">
         <div class="flip3D">
