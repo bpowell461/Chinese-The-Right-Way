@@ -1,7 +1,14 @@
+/* color variables for easier editing */
+:root{
+	--red-bg: #fe5f55;
+	--off-black: #454545;
+	--off-white: #fafcf5;
+}
+
 * { box-sizing: border-box; }
 html, body {
 	margin: 0;
-	background-color: #fafcf5;
+	background-color: var(--off-white);
 	width: 100%;
 	height: 100%;
 	font-family: 'Roboto', "微软雅黑", STXihei, "华文细黑", sans-serif;;
@@ -24,7 +31,7 @@ html, body {
 .header h1 {
 	font-size: 5rem;
 	font-weight: 900;
-	color: #454545;
+	color: var(--off-black);
 }
 .header p {
 	font-size: 1.5rem;
@@ -37,7 +44,7 @@ html, body {
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
-	background-color: #fe5f55;
+	background-color: var(--red-bg);
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0px;
@@ -51,14 +58,14 @@ html, body {
 }
 .navbutton a {
 	display: block;
-	color: #fafcf5;
+	color: var(--off-white);
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 }
 .navbutton a:hover {
-	color: #454545;
-	background-color: #fafcf5;
+	color: var(--off-black);
+	background-color: var(--off-white);
 }
 
 .grid-container {
@@ -86,8 +93,8 @@ html, body {
 }
 .footer {
 	grid-area: footer;
-	background-color: #fe5f55;
-	color: #fafcf5;
+	background-color: var(--red-bg);
+	color: var(--off-white);
 	text-align: center;
 	padding: 2rem;
 	line-height: 0.5rem;
@@ -107,8 +114,8 @@ html, body {
 	cursor: pointer;
 	font-weight: bold;
 }
-.grid-container a:visited { color: #454545; }
-.grid-container a:hover { color: #fe5f55; }
+.grid-container a:visited { color: var(--off-black); }
+.grid-container a:hover { color: var(--red-bg); }
 .grid-container img {
 	border-radius: 8px;
 	height: 300px;
@@ -116,24 +123,24 @@ html, body {
 	float: left;
 	padding: 1.2rem 1rem 1rem 0rem;
 }
-.grid-container h1 { color: #454545; }
-.grid-container h3 { color: #454545; }
-.grid-container p  { color: #454545; }
+.grid-container h1 { color: var(--off-black); }
+.grid-container h3 { color: var(--off-black); }
+.grid-container p  { color: var(--off-black); }
 .footer p {
-	color: #fafcf5;
+	color: var(--off-white);
 	font-size: 1rem;
 }
 .footer a {
 	text-decoration: underline;
-	color: #fafcf5;
+	color: var(--off-white);
 }
 .footer a:visited {
 	text-decoration: underline;
-	color: #fafcf5;
+	color: var(--off-white);
 }
 .footer a:hover {
 	text-decoration: underline;
-	color: #454545;
+	color: var(--off-black);
 }
 
 .tooltip {
@@ -147,7 +154,7 @@ html, body {
 	visibility: hidden;
 	width: 250px;
 	background-color: #ffffcc;
-	color: #454545;
+	color: var(--off-black);
 	text-align: left;
 	padding: 10px 20px 10px 20px;
 	border-radius: 6px;
@@ -164,7 +171,7 @@ html, body {
 .tooltip:hover .tooltiptext { visibility: visible; }
 
 ul {
-  border-left: 5px solid #fe5f55;
+  border-left: 5px solid var(--red-bg);
   background-color: #f1f1f1;
   list-style-type: none;
   padding: 10px 20px;

@@ -8,10 +8,10 @@ sotries, pictograms, interactive exercises, and database tools.
 ## Roadmap
 * [X]   Site Skeleton
 * [X]   Flashcards
-* [ ]   User Accounts
+* [X]   User Accounts
 * [ ]   Hua Mulan Text Reader
 * [X]   Character Database
-* [ ]   Fundamentals Exercises
+* [X]   Fundamentals Exercises
 * [ ]   Pinyin Guide
 * [ ]   Forming Characters
 * [ ]   Strokes and Radicals
@@ -19,6 +19,7 @@ sotries, pictograms, interactive exercises, and database tools.
 ## Development Team
 *   Project Leader: [Cody "Tarkus" Lee](blacktarkus.github.io)
 *   Faculty Advisor: Dr. Qiang M. Zhao
+*   Database Programmer: Brad Powell
 
 ### Development Tracker [Trello]
 https://trello.com/b/ZdsxZma3/csc480-chinese-project
