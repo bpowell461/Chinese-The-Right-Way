@@ -68,12 +68,12 @@ $json_array = json_encode($array);
         document.getElementById("translation").innerHTML = dataSet[i].definition;
     });
     function deci() { // next flashcard in array
-        i--;
+        i = i-1 % dataSet.length;
         document.getElementById("character").innerHTML = dataSet[i].symbol;
         document.getElementById("translation").innerHTML = dataSet[i].definition;
     };
     function inci() { // previous flashcard in array
-        i++;
+        i = i+1 % dataSet.length;
         document.getElementById("character").innerHTML = dataSet[i].symbol;
         document.getElementById("translation").innerHTML = dataSet[i].definition;
     };
