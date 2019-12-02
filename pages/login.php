@@ -129,7 +129,7 @@ $(document).ready(function () {
 		
     <!-- Footer -->
     <footer class="footer">  
-        <p>Cody "Tarkus" Lee</p>
+      <p>Cody "Tarkus" Lee, Brad Powell</p>
         <p>©MIT License - 2019</p>
     </footer>
 </div>
