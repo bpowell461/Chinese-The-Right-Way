@@ -46,13 +46,15 @@ $json_array = json_encode($array);
     <link href="../css/flash.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script type="text/javascript" src="../javascript/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="../javascript/dbcontents.js"></script>
+    <!--<script type="text/javascript" src="../javascript/dbcontents.js"></script>-->
     <script type="text/javascript">
 	/*This should be a 2D array with 'symbol' and 'definition' as the only two contents of the array
 	this should allow us to dynamically generate flashcards based on a user's level.*/
 
 	console.log(<?php echo $json_array; ?>);
-	testArray =(<?php echo $json_array; ?>);
+	dataSet =(<?php echo $json_array; ?>);
+	
+	//console.log(testArray[0].symbol);
 	
 	
     var i;
@@ -62,18 +64,18 @@ $json_array = json_encode($array);
     $(document).ready(function () { // default to first entry in array
         i = 0;
         shuffle(dataSet);
-        document.getElementById("character").innerHTML = dataSet[i][0];
-        document.getElementById("translation").innerHTML = dataSet[i][1];
+        document.getElementById("character").innerHTML = dataSet[i].symbol;
+        document.getElementById("translation").innerHTML = dataSet[i].definition;
     });
     function deci() { // next flashcard in array
         i--;
-        document.getElementById("character").innerHTML = dataSet[i][0];
-        document.getElementById("translation").innerHTML = dataSet[i][1];
+        document.getElementById("character").innerHTML = dataSet[i].symbol;
+        document.getElementById("translation").innerHTML = dataSet[i].definition;
     };
     function inci() { // previous flashcard in array
         i++;
-        document.getElementById("character").innerHTML = dataSet[i][0];
-        document.getElementById("translation").innerHTML = dataSet[i][1];
+        document.getElementById("character").innerHTML = dataSet[i].symbol;
+        document.getElementById("translation").innerHTML = dataSet[i].definition;
     };
     </script>
 </head>
