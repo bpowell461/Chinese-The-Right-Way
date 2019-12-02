@@ -11,17 +11,20 @@
 
 <!-- Sticky Navbar -->
 <ul class="navbar">
-    <li class="navbutton"><a href="../index.html" class="headerButton">Home</a></li>
-    <li class="navbutton"><a href="flashcards.html" class="headerButton">Flashcards</a></li>
-    <li class="navbutton"><a href="huamulan.html" class="headerButton">Hua Mulan</a></li>
-    <li class="navbutton"><a href="resources.html" class="headerButton">Resources</a></li>
-    <li class="navbutton"><a href="db.html" class="headerButton">Database</a></li>
+    <li class="navbutton"><a href="../index.php" class="headerButton">Home</a></li>
+    <li class="navbutton"><a href="flashcards.php" class="headerButton">Flashcards</a></li>
+    <li class="navbutton"><a href="huamulan.php" class="headerButton">Hua Mulan</a></li>
+    <li class="navbutton"><a href="resources.php" class="headerButton">Resources</a></li>
+    <li class="navbutton"><a href="db.php" class="headerButton">Database</a></li>
     <li class="navbutton"><a href="../php/login.php" class="headerButton">Account</a></li>
 </ul>
 
 <div class="grid-container">
-    <div class="middle">
-        <embed src="../assets/Mulan1.pdf" width="100%" height="768px" />
+    <div class="left">
+        <ul>
+            <li><a href="https://merceru.instructure.com/courses/37319/files/folder/Team%20Assignments/Sample%20Docs/Chinese%20Website%20-%20Concepts">Planned Documents</a></li>
+            <li><a href="../assets/Directions.pdf">Direction Words</a></li>
+        </ul>
     </div>
     <!-- Footer -->
     <footer class="footer">  

@@ -18,6 +18,7 @@ sotries, pictograms, interactive exercises, and database tools.
 
 ## Development Team
 *   Project Leader: [Cody "Tarkus" Lee](blacktarkus.github.io)
+*   Developer: Brad Powell
 *   Faculty Advisor: Dr. Qiang M. Zhao
 *   Database Programmer: Brad Powell
 
