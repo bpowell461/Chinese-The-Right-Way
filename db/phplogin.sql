@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2019 at 02:32 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Dec 10, 2019 at 07:45 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -51,11 +51,23 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `isTeacher`, `Pro
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `completionrelation`
+--
+
+CREATE TABLE `completionrelation` (
+  `AccID` int(11) NOT NULL,
+  `FlashID` int(9) NOT NULL,
+  `seen` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `flashcards`
 --
 
 CREATE TABLE `flashcards` (
-  `id` mediumint(9) NOT NULL,
+  `id` int(9) NOT NULL,
   `symbol` varchar(1) NOT NULL,
   `pinyin` varchar(10) NOT NULL,
   `definition` text NOT NULL,
@@ -672,6 +684,13 @@ ALTER TABLE `accounts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `completionrelation`
+--
+ALTER TABLE `completionrelation`
+  ADD UNIQUE KEY `AccID` (`AccID`,`FlashID`),
+  ADD KEY `FlashID` (`FlashID`);
+
+--
 -- Indexes for table `flashcards`
 --
 ALTER TABLE `flashcards`
@@ -691,7 +710,18 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `flashcards`
 --
 ALTER TABLE `flashcards`
-  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=590;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=590;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `completionrelation`
+--
+ALTER TABLE `completionrelation`
+  ADD CONSTRAINT `completionrelation_ibfk_1` FOREIGN KEY (`AccID`) REFERENCES `accounts` (`id`),
+  ADD CONSTRAINT `completionrelation_ibfk_2` FOREIGN KEY (`FlashID`) REFERENCES `flashcards` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
