@@ -11,7 +11,7 @@ sotries, pictograms, interactive exercises, and database tools.
 * [X]   User Accounts
 * [ ]   Hua Mulan Text Reader
 * [X]   Character Database
-* [X]   Fundamentals Exercises
+* [ ]   Fundamentals Exercises
 * [ ]   Pinyin Guide
 * [ ]   Forming Characters
 * [ ]   Strokes and Radicals
@@ -20,7 +20,6 @@ sotries, pictograms, interactive exercises, and database tools.
 *   Project Leader: [Cody "Tarkus" Lee](blacktarkus.github.io)
 *   Developer: Brad Powell
 *   Faculty Advisor: Dr. Qiang M. Zhao
-*   Database Programmer: Brad Powell
 
 ### Development Tracker [Trello]
 https://trello.com/b/ZdsxZma3/csc480-chinese-project

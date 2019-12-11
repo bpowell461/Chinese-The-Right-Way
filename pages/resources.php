@@ -11,7 +11,7 @@
 
 <!-- Sticky Navbar -->
 <ul class="navbar">
-    <li class="navbutton"><a href="../index.php" class="headerButton">Home</a></li>
+    <li class="navbutton"><a href="../index.html" class="headerButton">Home</a></li>
     <li class="navbutton"><a href="flashcards.php" class="headerButton">Flashcards</a></li>
     <li class="navbutton"><a href="huamulan.php" class="headerButton">Hua Mulan</a></li>
     <li class="navbutton"><a href="resources.php" class="headerButton">Resources</a></li>
@@ -28,7 +28,7 @@
     </div>
     <!-- Footer -->
     <footer class="footer">  
-        <p>Cody "Tarkus" Lee</p>
+        <p>Cody "Tarkus" Lee, Brad Powell</p>
         <p>©MIT License - 2019</p>
         <p>Stock Photos from <a href="https://www.pexels.com/" target="_blank">pexels.com</a></p>
     </footer>
